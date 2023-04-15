@@ -4,6 +4,15 @@ public class Adress {
     private String log;
     private int number;
 
+    public Adress() {
+    }
+
+    public Adress(int cep, String log, int number) {
+        this.cep = cep;
+        this.log = log;
+        this.number = number;
+    }
+
     public int getCep() {
         return cep;
     }

@@ -5,10 +5,17 @@ public class Account {
     Scanner sc = new Scanner(System.in);
     
     private int accountNumber;
-    private String agency;
+    private int agency;
     private float balance;
 
     public Account() {
+        balance = 0f;
+    }
+
+    public Account(int accountNumber, int agency, float balance ) {
+        this.accountNumber = accountNumber;
+        this.agency = agency;
+        this.balance = balance;
     }
 
     public int getAccountNumber() {
@@ -19,11 +26,11 @@ public class Account {
         this.accountNumber = accountNumber;
     }
 
-    public String getAgency() {
+    public int getAgency() {
         return agency;
     }
 
-    public void setAgency(String agency) {
+    public void setAgency(int agency) {
         this.agency = agency;
     }
 
@@ -54,7 +61,6 @@ public class Account {
         System.out.println("Seu saldo atual é de: R$" +  getBalance());
 
     }
-
 
 
 }

@@ -1,21 +1,36 @@
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        
-        int choice = 0;
 
-        System.out.println("1-Cadastras cliente\n2-Listar clientes\n3-Excluir clientes\n4-Sair");
+        try (Scanner sc = new Scanner(System.in)) {
+            Register r = new Register();
 
-        while(choice != 4) {
+            int choice = 0;
 
-            switch (choice) {
-                case 1:
-                    
-                    break;
-            
-                default:
-                    break;
-            }
+            do {
 
+                System.out.println("1-Cadastras cliente\n2-Listar clientes\n3-Excluir clientes\n4-Sair");
+
+                choice = sc.nextInt();
+
+                System.out.println("-----------------------");
+
+                switch (choice) {
+                    case 1:
+                        r.registerClient();
+                        break;
+                    case 2:
+                        r.shownClients();
+                        break;
+                    case 3:
+                        r.deleteClient();
+                        break;
+                    default:
+                        break;
+                }
+
+            } while (choice != 4);
         }
 
     }
